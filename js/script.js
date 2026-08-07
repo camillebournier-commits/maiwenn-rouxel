@@ -7,27 +7,32 @@
 
   /* ---------- Menu mobile ---------- */
   var toggle = document.getElementById('nav-toggle');
-  var links = document.getElementById('nav-links');
-  var cta = document.getElementById('nav-cta');
+  var menu = document.getElementById('nav-menu');
 
   function closeMenu(){
     toggle.setAttribute('aria-expanded', 'false');
-    links.classList.remove('open');
-    cta.classList.remove('open');
+    menu.classList.remove('open');
   }
 
-  if (toggle){
+  if (toggle && menu){
     toggle.addEventListener('click', function(){
       var expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
-      links.classList.toggle('open');
-      cta.classList.toggle('open');
+      menu.classList.toggle('open');
     });
 
-    links.querySelectorAll('a').forEach(function(a){
+    menu.querySelectorAll('a').forEach(function(a){
       a.addEventListener('click', closeMenu);
     });
-    cta.addEventListener('click', closeMenu);
+
+    /* Fermeture si on clique en dehors du menu ouvert */
+    document.addEventListener('click', function(e){
+      if (menu.classList.contains('open') &&
+          !menu.contains(e.target) &&
+          e.target !== toggle && !toggle.contains(e.target)){
+        closeMenu();
+      }
+    });
   }
 
   /* ---------- En-tête : ombre au scroll ---------- */
@@ -120,10 +125,14 @@
   var grid = document.getElementById('domaines-grid');
   if (grid){
     var html = domaines.map(function(d){
-      return '<div class="domaine-card">' +
-        '<span class="domaine-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + (icons[d.icone] || '') + '</svg></span>' +
-        '<div><h3>' + d.titre + '</h3><p>' + d.texte + '</p></div>' +
-        '</div>';
+      return '<details class="domaine-card">' +
+        '<summary>' +
+          '<span class="domaine-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + (icons[d.icone] || '') + '</svg></span>' +
+          '<h3>' + d.titre + '</h3>' +
+          '<svg class="domaine-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>' +
+        '</summary>' +
+        '<p>' + d.texte + '</p>' +
+        '</details>';
     }).join('');
     grid.innerHTML = html;
   }
