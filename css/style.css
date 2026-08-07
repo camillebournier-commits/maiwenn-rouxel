@@ -253,7 +253,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   z-index:1;
   display:grid;
   grid-template-columns:1.1fr .9fr;
-  gap:56px;
+  gap:36px;
   align-items:center;
 }
 .hero-title{
