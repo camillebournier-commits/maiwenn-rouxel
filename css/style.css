@@ -168,6 +168,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color:var(--sauge-600);
   margin-top:3px;
 }
+.nav-menu{
+  display:contents;
+}
 .nav-links{
   display:flex;
   gap:2.1rem;
@@ -793,30 +796,41 @@ section{
   .hero-lede{margin-inline:auto;}
   .hero-actions,.hero-meta{justify-content:center;}
   .hero-portrait{order:-1;margin-bottom:1rem;}
+
+  /* Même largeur qu'avant, hauteur divisée par deux (3/4 -> 3/2) */
+  .portrait-frame img{aspect-ratio:1/2;
+height: 400px;}
+
   .presentation{grid-template-columns:1fr;}
   .presentation-quote{position:static;}
   .honoraires-wrap{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;}
 }
 @media (max-width:800px){
-  .nav-links, .nav-cta{display:none;}
+  .nav-menu{display:none;}
   .nav-toggle{display:block;}
-  .nav-links.open{
+  .nav-menu.open{
     display:flex;
+    flex-direction:column;
+    align-items:flex-start;
     position:absolute;
     top:100%;left:0;right:0;
     background:var(--creme);
-    flex-direction:column;
     padding:1.4em 28px 2em;
-    gap:1.1em;
+    gap:1.4em;
     border-bottom:1px solid var(--sauge-200);
     box-shadow:0 20px 30px -20px rgba(38,56,42,.3);
+    max-height:calc(100vh - 100%);
+    overflow-y:auto;
   }
-  .nav-cta.open{
+  .nav-menu.open nav{width:100%;}
+  .nav-menu.open .nav-links{
+    flex-direction:column;
+    gap:1.1em;
+    width:100%;
+  }
+  .nav-menu.open .nav-cta{
     display:inline-flex;
-    position:absolute;
-    top:calc(100% + 220px);
-    left:28px;
   }
   section{padding:76px 0;}
   .hero{padding-top:140px;}
@@ -824,4 +838,29 @@ section{
 @media (max-width:520px){
   .footer-top{flex-direction:column;}
   .rate-card .rate-amount{font-size:2.7rem;}
+}
+@media (max-width:480px){
+  .container{padding:0 20px;}
+  .nav-inner{padding:14px 20px;}
+  .nav-menu.open{padding-left:20px;padding-right:20px;}
+
+  /* Grille des domaines : une colonne pour éviter les cartes trop comprimées */
+  .domaines-grid{grid-template-columns:1fr;}
+
+  /* Cartes moins larges en interne pour laisser respirer le texte */
+  .contact-card{padding:1.8em 1.5em;}
+  .rate-card{padding:2em 1.5em;}
+  .engagement-card{padding:1.7em 1.5em;}
+
+  /* Carte d'engagement : icône au-dessus du texte plutôt qu'à côté */
+  .engagement-card{
+    flex-direction:column;
+    gap:.9em;
+  }
+  .engagement-card svg{margin-top:0;}
+
+  /* Timeline resserrée */
+  .timeline-item{padding-left:52px;margin-bottom:2.1em;}
+  .timeline-dot{width:34px;height:34px;font-size:.72rem;left:0;top:1px;}
+  .timeline::before{left:16px;}
 }
