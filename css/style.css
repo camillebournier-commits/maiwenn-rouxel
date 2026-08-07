@@ -833,7 +833,7 @@ height: 400px;}
     display:inline-flex;
   }
   section{padding:76px 0;}
-  .hero{padding-top:140px;}
+  .hero{padding-top:100px;}
 }
 @media (max-width:520px){
   .footer-top{flex-direction:column;}
