@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.maiwenn-rouxel-avocat.fr/sitemap.xml
