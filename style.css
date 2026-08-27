@@ -860,8 +860,10 @@ section{
   .hero-portrait{order:-1;margin-bottom:1rem;}
 
   /* Même largeur qu'avant, hauteur divisée par deux (3/4 -> 3/2) */
-  .portrait-frame img{aspect-ratio:1/2;
-height: 400px;}
+  .portrait-frame img{
+     aspect-ratio: 1 / 1.5;
+        height: 300px;
+  }
 
   .presentation{grid-template-columns:1fr;}
   .presentation-quote{position:static;}
