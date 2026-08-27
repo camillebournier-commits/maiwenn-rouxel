@@ -686,7 +686,7 @@ section{
 .honoraires-text li svg{width:16px;height:16px;color:var(--sauge-600);flex-shrink:0;margin-top:.3em;}
 .honoraires-foot{
   margin-top:1.6em;
-  font-size:.8rem;
+  font-size:1.1rem;
   color:var(--sauge-700);
   font-style:italic;
   border-left:2px solid var(--sauge-400);
