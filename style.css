@@ -746,7 +746,7 @@ section{
   box-shadow:var(--shadow-soft);
 }
 .contact-card h3{font-size:1.25rem;}
-.contact-card p.lede{color:var(--encre-douce);font-size:.92rem;margin-bottom:1.6em;}
+.contact-card p.lede{color:var(--encre-douce);font-size:1.1rem;margin-bottom:1.6em;}
 .form-row{margin-bottom:1.2em;}
 .form-row label{
   display:block;
