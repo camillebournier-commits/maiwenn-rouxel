@@ -707,14 +707,14 @@ section{
 }
 .contact-list svg{width:17px;height:17px;color:var(--sauge-600);}
 .contact-list .label{
-  font-size:.74rem;
+  font-size:.9rem;
   text-transform:uppercase;
   letter-spacing:.08em;
   color:var(--sauge-600);
   margin-bottom:.2em;
 }
 .contact-list a, .contact-list span.value{
-  font-size:1rem;
+  font-size:1.1rem;
   color:var(--sauge-900);
   text-decoration:none;
 }
