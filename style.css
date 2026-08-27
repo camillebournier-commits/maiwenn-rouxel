@@ -209,7 +209,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color:#fff !important;
   text-decoration:none;
   border-radius:100px;
-  font-size:.82rem;
+  font-size:.1.1rem;
   letter-spacing:.02em;
   transition:background .25s var(--ease), transform .25s var(--ease);
   white-space:nowrap;
