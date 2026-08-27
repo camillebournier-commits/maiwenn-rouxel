@@ -100,7 +100,7 @@
     { titre: "Droit des obligations", texte: "Analyse et défense de vos engagements contractuels et extra-contractuels ainsi que de leurs conséquences." },
     { titre: "Droit des contrats", texte: "Rédaction, négociation et contentieux relatifs à vos contrats." },
     { titre: "Responsabilité civile", texte: "Réparation des préjudices, défense et / ou mise en cause des responsabilités." },
-    { titre: "Droit de la consommation", texte: "Défense de vos droits dans vos relations avec les professionnels." },
+    { titre: "Droit de la consommation", texte: "Défense de vos droits dans vos relations avec les commerçants." },
     { titre: "Droit pénal général", texte: "Assistance et défense des plaignants / victimes comme des mis en cause; des parties civiles comme des prévenus." },
     { titre: "Droit du tourisme", texte: "Litiges liés aux contrats de voyage et de séjour touristique, ainsi qu'aux contrats de transport et hébergement." },
     { titre: "Litiges locatifs", texte: "Conflits entre bailleurs et locataires, baux d'habitation et commerciaux (rétention de garantie, caution, arriérés de loyers, expulsion…)." },
