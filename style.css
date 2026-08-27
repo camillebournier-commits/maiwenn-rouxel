@@ -910,7 +910,7 @@ section{
 
   /* Grille des domaines : mise en page compacte sur mobile pour limiter le scroll */
   .domaines-tabs{gap:8px;}
-  .domaines-tab{padding:.6em 1.1em;font-size:1.1rem;}
+  .domaines-tab{padding:.6em 1.1em;font-size:1.02rem;}
   .domaines-grid{grid-template-columns:1fr;gap:10px;}
   .domaine-card{padding:1.1em 1.2em;}
   .domaine-card h3{font-size:.92rem;}
