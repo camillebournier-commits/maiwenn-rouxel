@@ -680,7 +680,7 @@ section{
   gap:.8em;
   align-items:flex-start;
   margin-bottom:1em;
-  font-size:.94rem;
+  font-size:1.1rem;
   color:var(--encre-douce);
 }
 .honoraires-text li svg{width:16px;height:16px;color:var(--sauge-600);flex-shrink:0;margin-top:.3em;}
