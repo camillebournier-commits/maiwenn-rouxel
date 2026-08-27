@@ -597,8 +597,8 @@ section{
   align-items:flex-start;
 }
 .engagement-card svg{width:30px;height:30px;color:var(--sauge-600);flex-shrink:0;margin-top:.2em;}
-.engagement-card h3{font-size:1.1rem;margin-bottom:.4em;}
-.engagement-card p{color:var(--encre-douce);font-size:.94rem;margin-bottom:.6em;}
+.engagement-card h3{font-size:1.12rem;margin-bottom:.4em;}
+.engagement-card p{color:var(--encre-douce);font-size:1.1rem;margin-bottom:.6em;}
 .engagement-card a{
   color:var(--sauge-700);
   font-weight:500;
@@ -616,6 +616,9 @@ section{
   align-items:center;
   max-width:980px;
   margin:0 auto;
+}
+.honoraires-text{
+   font-size:1.1rem;
 }
 .rate-card{
   background:var(--sauge-900);
