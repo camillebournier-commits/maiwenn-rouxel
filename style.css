@@ -180,7 +180,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .nav-links a{
   text-decoration:none;
-  font-size:1.1rem;
+  font-size:0.95rem;
   letter-spacing:.03em;
   color:var(--sauge-900);
   position:relative;
