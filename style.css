@@ -145,7 +145,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:14px 28px;
+  padding:14px 20px;
   max-width:var(--container);
   margin:0 auto;
 }
