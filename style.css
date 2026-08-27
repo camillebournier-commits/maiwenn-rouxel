@@ -914,7 +914,7 @@ section{
   .domaines-grid{grid-template-columns:1fr;gap:10px;}
   .domaine-card{padding:1.1em 1.2em;}
   .domaine-card h3{font-size:.92rem;}
-  .domaine-card p, .domaine-card li{font-size:.84rem;}
+  .domaine-card p, .domaine-card li{font-size:1.1rem;}
 
   /* Cartes moins larges en interne pour laisser respirer le texte */
   .contact-card{padding:1.8em 1.5em;}
