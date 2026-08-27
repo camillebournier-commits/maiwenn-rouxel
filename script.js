@@ -157,11 +157,9 @@
         headers: { 'Accept': 'application/json' },
         body: new FormData(form)
       })
-        .then(function(response){
-          if (!response.ok) throw new Error('network');
-          return response.json();
-        })
-        .then(function(){
+        .then(function(response){ return response.json(); })
+        .then(function(data){
+          if (!data.success) throw new Error('web3forms');
           feedback.textContent = 'Votre message a bien été envoyé. Merci, une réponse vous sera apportée rapidement.';
           feedback.classList.add('is-success');
           form.reset();
