@@ -164,7 +164,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .brand-role{
   font-family:var(--font-display);
   font-style:italic;
-  font-size:1rem;
+  font-size:.66rem;
   letter-spacing:.06em;
   color:var(--sauge-600);
   margin-top:3px;
@@ -180,7 +180,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .nav-links a{
   text-decoration:none;
-  font-size:1rem;
+  font-size:.86rem;
   letter-spacing:.03em;
   color:var(--sauge-900);
   position:relative;
@@ -209,7 +209,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color:#fff !important;
   text-decoration:none;
   border-radius:100px;
-  font-size:.1.1rem;
+  font-size:.82rem;
   letter-spacing:.02em;
   transition:background .25s var(--ease), transform .25s var(--ease);
   white-space:nowrap;
@@ -272,7 +272,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-lede{
   max-width:44ch;
   color:var(--encre-douce);
-  font-size:1.1rem;
+  font-size:1.04rem;
   margin-bottom:1.9em;
 }
 .hero-actions{
@@ -305,7 +305,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display:flex;
   flex-wrap:wrap;
   gap:10px 28px;
-  font-size:1rem;
+  font-size:.8rem;
   color:var(--sauge-700);
   letter-spacing:.03em;
 }
@@ -322,7 +322,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .portrait-frame img{
   width:100%;
-   height:88%;
   aspect-ratio:3/4;
   object-fit:cover;
   border-radius:170px 170px 20px 20px;
@@ -367,11 +366,11 @@ section{
 .section-alt{background:var(--sauge-100);}
 .section-head{
   text-align:center;
-  max-width:750px;
+  max-width:680px;
   margin:0 auto 1.5rem;
 }
 .section-head h2{font-size:clamp(1.9rem,3vw,2.5rem);}
-.section-head p{color:var(--encre-douce);font-size:1.1rem;margin-top:.7em;}
+.section-head p{color:var(--encre-douce);font-size:1.02rem;margin-top:.7em;}
 .divider-wrap{
   padding:0 0 0;
   display:flex;justify-content:center;
@@ -436,7 +435,7 @@ section{
   text-transform:uppercase;
   color:var(--sauge-600);
 }
-.presentation-text p{font-size:1.1rem;color:var(--encre);}
+.presentation-text p{font-size:1.03rem;color:var(--encre);}
 .presentation-text p:first-of-type::first-letter{
   font-family:var(--font-display);
   font-size:3.4em;
@@ -462,67 +461,69 @@ section{
 }
 
 /* ---------- Domaines d'intervention ---------- */
+.domaines-tabs{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:2.4em 0 2.2em;
+}
+.domaines-tab{
+  padding:.7em 1.5em;
+  border:1px solid var(--sauge-200);
+  border-radius:999px;
+  background:var(--blanc);
+  color:var(--sauge-700);
+  font-family:var(--font-body);
+  font-size:.92rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+}
+.domaines-tab:hover{border-color:var(--sauge-400);}
+.domaines-tab.is-active{
+  background:var(--sauge-600);
+  border-color:var(--sauge-600);
+  color:var(--blanc);
+}
+
+.domaines-panel[hidden]{display:none;}
+
 .domaines-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:14px;
 }
 .domaine-card{
   background:var(--blanc);
   border:1px solid var(--sauge-200);
   border-radius:var(--radius-md);
-  transition:box-shadow .3s var(--ease), border-color .3s var(--ease);
+  padding:1.3em 1.4em;
 }
-.domaine-card:hover{
-  box-shadow:var(--shadow-soft);
-  border-color:var(--sauge-400);
-}
-.domaine-card summary{
-  list-style:none;
-  cursor:pointer;
-  padding:1.5em 1.6em;
-  display:flex;
-  gap:1em;
-  align-items:center;
-  -webkit-tap-highlight-color:transparent;
-}
-.domaine-card summary::-webkit-details-marker{display:none;}
-.domaine-icon{
-  flex-shrink:0;
-  width:40px;height:40px;
-  border-radius:50%;
-  background:var(--sauge-100);
-  display:flex;align-items:center;justify-content:center;
-}
-.domaine-icon svg{width:19px;height:19px;color:var(--sauge-600);}
 .domaine-card h3{
   font-family:var(--font-body);
   font-weight:600;
   font-size:1rem;
   color:var(--sauge-900);
-  margin:0;
-  flex:1;
+  margin:0 0 .6em;
 }
-.domaine-chevron{
-  width:16px;height:16px;
-  color:var(--sauge-600);
-  flex-shrink:0;
-  transition:transform .25s var(--ease);
-}
-.domaine-card[open] .domaine-chevron{transform:rotate(180deg);}
 .domaine-card p{
-  font-size:.86rem;
+  font-size:.88rem;
   color:var(--encre-douce);
+  line-height:1.6;
   margin:0;
-  padding:0 1.6em 1.5em calc(40px + 1em + 1.6em);
 }
-/* Sur desktop, la description reste toujours visible (comme avant),
-   le repli/dépli n'existe que sur mobile pour gagner de la hauteur. */
-@media (min-width:801px){
-  .domaine-card summary{cursor:default;}
-  .domaine-chevron{display:none;}
-  .domaine-card p{display:block !important;}
+.domaine-card ul{
+  margin:0;
+  padding-left:1.15em;
+  color:var(--encre-douce);
 }
+.domaine-card li{
+  font-size:.88rem;
+  line-height:1.6;
+  margin-bottom:.5em;
+}
+.domaine-card li:last-child{margin-bottom:0;}
 
 /* ---------- Parcours / diplômes (timeline) ---------- */
 .timeline{
@@ -561,18 +562,18 @@ section{
   color:#fff;
 }
 .timeline-item h3{
-  font-size:1.12rem;
+  font-size:1.08rem;
   margin-bottom:.2em;
 }
 .timeline-item .meta{
-  font-size:.9rem;
+  font-size:.8rem;
   color:var(--sauge-600);
   letter-spacing:.03em;
   text-transform:uppercase;
   margin-bottom:.5em;
   display:block;
 }
-.timeline-item p{color:var(--encre-douce);font-size:1.1rem;margin:0;}
+.timeline-item p{color:var(--encre-douce);font-size:.94rem;margin:0;}
 .badge-progress{
   display:inline-block;
   margin-left:.6em;
@@ -598,8 +599,8 @@ section{
   align-items:flex-start;
 }
 .engagement-card svg{width:30px;height:30px;color:var(--sauge-600);flex-shrink:0;margin-top:.2em;}
-.engagement-card h3{font-size:1.12rem;margin-bottom:.4em;}
-.engagement-card p{color:var(--encre-douce);font-size:1.1rem;margin-bottom:.6em;}
+.engagement-card h3{font-size:1.1rem;margin-bottom:.4em;}
+.engagement-card p{color:var(--encre-douce);font-size:.94rem;margin-bottom:.6em;}
 .engagement-card a{
   color:var(--sauge-700);
   font-weight:500;
@@ -617,9 +618,6 @@ section{
   align-items:center;
   max-width:980px;
   margin:0 auto;
-}
-.honoraires-text p{
-   font-size:1.1rem;
 }
 .rate-card{
   background:var(--sauge-900);
@@ -658,7 +656,7 @@ section{
   margin-top:1.6em;
   padding-top:1.4em;
   border-top:1px solid rgba(255,255,255,.18);
-  font-size:1.1rem;
+  font-size:.85rem;
   color:var(--sauge-200);
   line-height:1.6;
 }
@@ -668,10 +666,10 @@ section{
 }
 .honoraires-text li{
   display:flex;
-  gap:.6em;
+  gap:.8em;
   align-items:flex-start;
   margin-bottom:1em;
-  font-size:1.1rem;
+  font-size:.94rem;
   color:var(--encre-douce);
 }
 .honoraires-text li svg{width:16px;height:16px;color:var(--sauge-600);flex-shrink:0;margin-top:.3em;}
@@ -708,14 +706,14 @@ section{
 }
 .contact-list svg{width:17px;height:17px;color:var(--sauge-600);}
 .contact-list .label{
-  font-size:.9rem;
+  font-size:.74rem;
   text-transform:uppercase;
   letter-spacing:.08em;
   color:var(--sauge-600);
   margin-bottom:.2em;
 }
 .contact-list a, .contact-list span.value{
-  font-size:1.1rem;
+  font-size:1rem;
   color:var(--sauge-900);
   text-decoration:none;
 }
@@ -737,7 +735,7 @@ section{
   box-shadow:var(--shadow-soft);
 }
 .contact-card h3{font-size:1.25rem;}
-.contact-card p.lede{color:var(--encre-douce);font-size:1.1rem;margin-bottom:1.6em;}
+.contact-card p.lede{color:var(--encre-douce);font-size:.92rem;margin-bottom:1.6em;}
 .form-row{margin-bottom:1.2em;}
 .form-row label{
   display:block;
@@ -764,7 +762,7 @@ section{
   outline:none;
 }
 .form-note{
-  font-size:.85rem;
+  font-size:.76rem;
   color:var(--encre-douce);
   margin-top:1em;
 }
@@ -896,24 +894,13 @@ height: 400px;}
   .nav-inner{padding:14px 20px;}
   .nav-menu.open{padding-left:20px;padding-right:20px;}
 
-  /* Grille des domaines : 2 colonnes compactes sur mobile pour limiter le scroll */
-  .domaines-grid{grid-template-columns:1fr 1fr;gap:10px;}
-  .domaine-card summary{
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    padding:1.1em .7em;
-    gap:.6em;
-  }
-  .domaine-icon{width:34px;height:34px;}
-  .domaine-icon svg{width:16px;height:16px;}
-  .domaine-card h3{font-size:.82rem;line-height:1.28;}
-  .domaine-chevron{width:14px;height:14px;}
-  .domaine-card p{
-    padding:0 1em 1.1em;
-    text-align:left;
-    font-size:.8rem;
-  }
+  /* Grille des domaines : mise en page compacte sur mobile pour limiter le scroll */
+  .domaines-tabs{gap:8px;}
+  .domaines-tab{padding:.6em 1.1em;font-size:.85rem;}
+  .domaines-grid{grid-template-columns:1fr;gap:10px;}
+  .domaine-card{padding:1.1em 1.2em;}
+  .domaine-card h3{font-size:.92rem;}
+  .domaine-card p, .domaine-card li{font-size:.84rem;}
 
   /* Cartes moins larges en interne pour laisser respirer le texte */
   .contact-card{padding:1.8em 1.5em;}

@@ -184,19 +184,47 @@
       <div class="section-head reveal">
         <p class="eyebrow" style="justify-content:center">Domaines d'intervention</p>
         <h2>Un accompagnement en conseil et en contentieux</h2>
-        <p>Dix domaines de compétence pour répondre aux besoins juridiques des particuliers comme des professionnels.</p>
+        <p>Une double expertise : le droit animalier, au cœur de mon engagement, et un accompagnement généraliste pour les particuliers dans neuf autres domaines du droit.</p>
       </div>
 
-      <div class="domaines-grid reveal" id="domaines-grid">
-        <!-- injected by JS from data list below for consistency, fallback static content -->
+      <div class="domaines-tabs reveal" role="tablist" aria-label="Domaines d'intervention">
+        <button type="button" class="domaines-tab is-active" id="tab-animalier" role="tab" aria-selected="true" aria-controls="panel-animalier" data-tab="animalier">Droit animalier</button>
+        <button type="button" class="domaines-tab" id="tab-particuliers" role="tab" aria-selected="false" aria-controls="panel-particuliers" data-tab="particuliers" tabindex="-1">Droit pour les particuliers</button>
       </div>
-      <noscript>
-        <ul>
-          <li>Droit des obligations</li><li>Droit des contrats</li><li>Responsabilité civile</li>
-          <li>Droit de la consommation</li><li>Droit pénal général</li><li>Droit des animaux</li>
-          <li>Droit du tourisme</li><li>Litiges locatifs</li><li>Procédure civile</li><li>Conseil et contentieux</li>
-        </ul>
-      </noscript>
+
+      <div class="domaines-panel reveal" id="panel-animalier" role="tabpanel" aria-labelledby="tab-animalier">
+        <div class="domaines-grid">
+          <div class="domaine-card">
+            <h3>Mise en conformité</h3>
+            <ul>
+              <li>Audit et refonte des contrats d'adoption et d'accueil</li>
+              <li>Mise à jour des statuts associatifs</li>
+              <li>Rédaction de fiches préventives et de procédures pour sécuriser les interventions des bénévoles</li>
+            </ul>
+          </div>
+          <div class="domaine-card">
+            <h3>Contentieux</h3>
+            <ul>
+              <li>Exécution des contrats d'adoption et d'accueil</li>
+              <li>Responsabilité : dommages causés par un animal, troubles du voisinage</li>
+              <li>Défense pénale : maltraitance et constitution de partie civile pour les associations et les particuliers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="domaines-panel" id="panel-particuliers" role="tabpanel" aria-labelledby="tab-particuliers">
+        <div class="domaines-grid" id="domaines-grid">
+          <!-- injected by JS from data list below for consistency, fallback static content -->
+        </div>
+        <noscript>
+          <ul>
+            <li>Droit des obligations</li><li>Droit des contrats</li><li>Responsabilité civile</li>
+            <li>Droit de la consommation</li><li>Droit pénal général</li>
+            <li>Droit du tourisme</li><li>Litiges locatifs</li><li>Procédure civile</li><li>Conseil et contentieux</li>
+          </ul>
+        </noscript>
+      </div>
     </div>
   </section>
 
