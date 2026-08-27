@@ -164,7 +164,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .brand-role{
   font-family:var(--font-display);
   font-style:italic;
-  font-size:.66rem;
+  font-size:1rem;
   letter-spacing:.06em;
   color:var(--sauge-600);
   margin-top:3px;
