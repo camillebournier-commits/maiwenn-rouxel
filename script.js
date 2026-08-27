@@ -149,6 +149,14 @@
     });
   }
 
+  /* ---------- Liens "Voir plus / Voir moins" (mobile) ---------- */
+  document.querySelectorAll('[data-collapse]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = document.getElementById(btn.getAttribute('data-collapse'));
+      if (target) target.classList.toggle('is-expanded');
+    });
+  });
+
   /* ---------- Formulaire de contact (envoi direct via FormSubmit) ---------- */
   var form = document.getElementById('contact-form');
   if (form){

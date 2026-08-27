@@ -456,6 +456,24 @@ section{
   line-height:1.65;
 }
 .presentation-list li::marker{color:var(--sauge-600);font-weight:600;}
+
+/* ---------- Liens "Voir plus / Voir moins" (mobile uniquement) ---------- */
+.voir-plus-toggle, .voir-moins-toggle{
+  display:none;
+  background:none;
+  border:none;
+  padding:0;
+  margin-top:1em;
+  font-family:var(--font-body);
+  font-size:.9rem;
+  font-weight:600;
+  color:var(--sauge-700);
+  cursor:pointer;
+}
+.voir-plus-toggle:hover, .voir-moins-toggle:hover{color:var(--sauge-600);}
+.voir-moins-toggle{margin-top:1.2em;}
+.collapsible-content{display:block;}
+
 .tag-row{
   display:flex;
   flex-wrap:wrap;
@@ -538,6 +556,8 @@ section{
 .domaine-card li:last-child{margin-bottom:0;}
 
 /* ---------- Parcours / diplômes (timeline) ---------- */
+.timeline-collapse-wrap{display:flex;flex-direction:column;}
+.timeline-collapse{max-height:none;overflow:visible;}
 .timeline{
   max-width:760px;
   margin:0 auto;
@@ -898,6 +918,38 @@ section{
   }
   section{padding:30px 0;}
   .hero{padding-top:100px;}
+
+  /* Présentation : texte tronqué avec "Voir plus / Voir moins" */
+  #presentation-block .collapsible-content{display:none;}
+  #presentation-block .voir-plus-toggle{display:inline-flex;}
+  #presentation-block.is-expanded .collapsible-content{display:block;}
+  #presentation-block.is-expanded .voir-plus-toggle{display:none;}
+
+  /* Parcours : timeline tronquée avec effet de fondu + "Voir plus / Voir moins" */
+  .timeline-collapse{
+    position:relative;
+    max-height:150px;
+    overflow:hidden;
+    filter:blur(0);
+    transition:max-height .4s ease;
+  }
+  .timeline-collapse::after{
+    content:'';
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:90px;
+    background:linear-gradient(to bottom, transparent, var(--creme) 85%);
+    pointer-events:none;
+  }
+  .timeline-collapse .voir-moins-toggle{display:inline-flex;}
+  #timeline-collapse-wrap .voir-plus-toggle{display:inline-flex;}
+  #timeline-collapse-wrap.is-expanded .timeline-collapse{max-height:2000px;}
+  #timeline-collapse-wrap.is-expanded .timeline-collapse::after{display:none;}
+  #timeline-collapse-wrap.is-expanded .voir-plus-toggle{display:none;}
+
+  /* Contact : formulaire affiché avant les coordonnées */
+  .contact-grid > .contact-card{order:1;}
+  .contact-grid > div:not(.contact-card){order:2;}
 }
 @media (max-width:520px){
   .footer-top{flex-direction:column;}
