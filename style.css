@@ -572,7 +572,7 @@ section{
   margin-bottom:.5em;
   display:block;
 }
-.timeline-item p{color:var(--encre-douce);font-size:.1.1rem;margin:0;}
+.timeline-item p{color:var(--encre-douce);font-size:1.1rem;margin:0;}
 .badge-progress{
   display:inline-block;
   margin-left:.6em;
